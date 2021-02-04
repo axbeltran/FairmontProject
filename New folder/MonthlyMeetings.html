@@ -1,0 +1,162 @@
+<?php 
+	require 'php/header.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Monthly Meetings</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:160px;">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoA')">
+  2018 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoA" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoB')">
+  2019 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoB" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoC')">
+  2020 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoC" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoD')">
+  2021 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoD" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoE')">
+  2022 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoE" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoF')">
+  2023 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoF" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('demoG')">
+  2024 <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="demoG" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+    <a href="#" class="w3-bar-item w3-button">February</a>
+	<a href="#" class="w3-bar-item w3-button">March</a>
+	<a href="#" class="w3-bar-item w3-button">April</a>
+	<a href="#" class="w3-bar-item w3-button">May</a>
+	<a href="#" class="w3-bar-item w3-button">June</a>
+	<a href="#" class="w3-bar-item w3-button">July</a>
+	<a href="#" class="w3-bar-item w3-button">August</a>
+	<a href="#" class="w3-bar-item w3-button">September</a>
+	<a href="#" class="w3-bar-item w3-button">October</a>
+	<a href="#" class="w3-bar-item w3-button">November</a>
+	<a href="#" class="w3-bar-item w3-button">December</a>
+  </div>
+</div>
+
+
+
+<script>
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+</script>
+</body>
+</html>
+

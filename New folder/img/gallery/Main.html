@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Main Page</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+<link href="css/Slideshow.css" rel="stylesheet" type="text/css" />
+<script src="javascript/Slideshow.js" type="text/javascript"></script>
+</head>
+<body>
+
+<?php 
+	require 'php/header.php';
+?>
+<!-- Slideshow container -->
+
+<div style="height: 100px;">
+<?php 
+	require 'img\gallery\phpslideshow.php';
+?>
+</div>
+	
+<!-- Dayne resize and shapes and size	 -->
+
+<br>
+
+<!-- The dots/circles 
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>  -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<hr>
+<br><br><br>
+<font size="+6">Who is the Fairmont Community?</font>
+<p><font size="+3">The Fairmont Community is a small, urban, unicorporated neighborhood
+located between Lockport and Joliet in Will County, Illinois. Originally founded in the 
+1870's, Fairmont has served as a place for generations to call home. 
+The Fairmont-Lewis Coalition brings together citizens, educators and leaders from the
+ Fairmont Community and Lewis University in order to build strategic and sustainable
+ partnerships for responding effectively to community identified priorities.  
+ </font></p>
+ 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+<br><br><br><br>
+
+
+
+
+<!-- htaccess  able to run php through html  -->	
+
+<!--   Gallery  -- >
+<-- Button to upload images     Will ( gallery.php, uploadTestFile.php) not adding the file to the page  -->
+<?php
+/*$fo=opendir("img/gallery");
+while($file=readdir($fo))
+{
+	//echo $file
+		if('file'!="." && $file!=".." && $file!="Thumbs.db")
+		{
+			echo "<img src='img/gallery/$file' width='150' height='150'/>
+			&nbsp;&nbsp;&nbsp;&nbsp;";
+		}
+}*/
+if(isset($_POST['upd']))
+{
+	if(file_exists(__FILE__.$_FILES['file']['name']))
+	{
+	echo "<font color='red'>".$_FILES['file']['name']." already exist</font>";
+	}
+	else
+	{
+		$Supported_image = array('gif','jpg','jpeg','png');
+		
+		$src_file_name = $_FILES['file']['name'];
+		$ext = strtolower(pathinfo($src_file_name, PATHINFO_EXTENSION));
+	if (in_array($ext, $Supported_image))
+	{
+	move_uploaded_file($_FILES['file']['tmp_name'],__FILE__.$_FILES['file']['name']);
+	echo $_FILES['file']['name']." image uploaded";
+	}
+	else
+	{
+		echo "<font color='red'>please choose a valid image</font>";
+}}}
+?>
+<form method="post" enctype="multipart/form-data">
+choose your image<input type="file" name="file"/><br/>
+<input type="submit" value="upload image" name="upd"/>
+</form>
+
+	
+<!--  About Fairmont  ->
+<!---  Dain     -->
+		
+
+
+
+
+
+
+
+
+<script>
+  showSlides(slideIndex);
+</script>
+</body>
+</html>
