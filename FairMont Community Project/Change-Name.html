@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fairmont Community</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+<nav><ul>
+		<li><a href="Main.html">Home</a></li>
+		<li><a href="Services.html">Services</a></li>
+		<li><a href="https://www.paypal.com/paypalme/FairmontCommunity/">Donations</a></li>
+		<li><a href="History.html">History</a></li>
+		<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
+		<li><a href="http://localhost:8080/FairMont%20Community%20Project/eventsCalendar.php">Events</a></li>
+		<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
+		<li><a href="https://www.fsd89.org/">School</a></li>
+	</ul></nav>
+</head>
+<?php 
+	session_start();
+?>
+<body>
+	<h1>
+	Change Name
+	<br>
+	<hr size="23" color="black" noshade>
+	<form action="http://localhost:8080/FairMont%20Community%20Project/php/change-name.php" method="post">
+		<p>First Name</p>
+		<input type="text" placeholder="Enter First Name" name="changefname" required>
+		<p>Last Name</p>
+		<input type="text" placeholder="Enter Last Name" name="changelname" required>
+		<button name="name-submit" type="submit">Submit</button>
+	</form>
+	</h1>
+</body>
+</html>
