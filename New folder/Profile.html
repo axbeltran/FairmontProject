@@ -1,0 +1,34 @@
+<?php 
+	session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fairmont Community</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+<nav><ul>
+		<li><a href="Main.html">Home</a></li>
+		<li><a href="Services.html">Services</a></li>
+		<li><a href="https://www.paypal.com/paypalme/FairmontCommunity/">Donations</a></li>
+		<li><a href="History.html">History</a></li>
+		<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
+		<li><a href="eventsCalendar.php">Events</a></li>
+		<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
+		<li><a href="https://www.fsd89.org/">School</a></li>
+	</ul></nav>
+</head>
+<body>
+	<h1>
+	Profile
+	<br>
+	<hr size="23" color="black" noshade>
+	<?php 
+		echo "<br><br>Name: ".$_SESSION['fName']." ".$_SESSION['lName']." "."<a href='#'>Edit</a><br>";
+		echo "<br><br>Email: ".$_SESSION['mail']." "."<a href='#'>Edit</a><br>";
+		echo "<br><br>Password: <a href='#'>Edit</a><br>";
+		echo "<br><br>Access Level: ".$_SESSION['UserType']."<br>";
+	?>
+	</h1>
+</body>
+</html>

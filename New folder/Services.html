@@ -1,0 +1,54 @@
+<?php 
+	require 'php/header.php';
+?>
+<!-- Add to this page -- Dr. Lewis -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Services</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+</head>
+<body>
+	<?php
+		if ($_SESSION['UserType'] == 'Admin') { 
+	?>
+		<form action="http://localhost:8080/FairMont%20Community%20Project/Add-Service.html" method="post">
+			<div class="container">
+			<button name="add-service" type="submit">Add Service</button>
+			</div>
+		</form>
+	<?php
+		}
+
+		include_once 'php/dbh.php';
+		$search = $_GET['search'];
+		if ($search == "") {
+			$sql = "SELECT * FROM services";
+		}
+		else {
+			$sql = "SELECT * FROM services WHERE ServiceTitle LIKE '%".$search."%'";
+		}
+		
+		$result = mysqli_query($conn, $sql);
+		$resultCheck = mysqli_num_rows($result);
+	?>
+		<form action="http://localhost:8080/FairMont%20Community%20Project/php/search.php" method="post">
+			<div class="container">
+			<input type="text" placeholder="search" name="search" required>
+			<button name="search-submit" type="submit">Search</button>
+			</div>
+		</form>
+	<?php
+		if ($resultCheck > 0) {
+			while ($row = mysqli_fetch_assoc($result)) {
+				echo $row['ServiceTitle']."<br>".$row['ServiceDescription']."<br><br>";
+			}
+		}
+		else {
+			echo "No services in the database.";
+		}
+	?>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?php 
+	require 'php/header.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Add Service</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+</head>
+<body>
+	<?php
+		if ($_SESSION['UserType'] == 'Admin') { 
+	?>
+		<form action="http://localhost:8080/FairMont%20Community%20Project/php/Add-Service.php" method="post">
+			<div class="container">
+			<h1>Add Service</h1>
+			<p>Instructions: The title and desctiption can take html code so you can use that to style them. For the desctiption please include contact information for the client to use to contact you.</p>
+			<input type="text" placeholder="Enter Title" name="serviceTitle" required>
+			<input type="text" placeholder="Enter Discription" name="serviceDescription" size="100" required>
+			<button name="add-service-submit" type="submit">Add Service</button>
+			</div>
+		</form>
+	<?php
+		}
+	?>
+</body>
+</html>

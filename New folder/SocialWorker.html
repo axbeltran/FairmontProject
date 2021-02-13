@@ -1,0 +1,91 @@
+<?php 
+	require 'php/header.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Social Worker</title>
+<meta charset="utf-8">
+<link href="css/Main.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:275px;">
+  
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('YD')">
+  Youth Development <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="YD" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div> 
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('REA')">
+  Re-Entry Assistance <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="REA" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>  
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('R')">
+  Recidivism <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="R" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>
+
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('VP')">
+  Violence Prevention <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="VP" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('FPL')">
+  Financial Planning and Literacy <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="FPL" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('FC')">
+  Family Counseling <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="FC" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('DC')">
+  Divorce Counseling <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="DC" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>
+  
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('CSA')">
+  Child Support Assistance <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="CSA" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">January</a>
+  </div>
+</div>
+
+<script>
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+</script>
+</body>
+</html>

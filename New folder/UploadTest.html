@@ -1,0 +1,59 @@
+<?php 
+	require 'php/header.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>UploadTest Page</title>
+		<meta charset="utf-8">
+		<link href="css/Main.css" rel="stylesheet">
+	</head>
+	<body>
+		<a href="Main.html">
+		<h1>
+			Fairmount
+			<br>
+			Community
+		</h1>
+		</a>
+		<!--<img src=".jpg" alt="" width="600" height="600">-->
+		<h2>
+			Hello
+		</h2>
+		<script>
+			document.write(); // Name goes here
+		</script>
+		<nav><ul>
+			<li><a href="Services.html">Services</a></li>
+			<li><a href="Donations.html">Donations</a></li>
+			<li><a href="History.html">History</a></li>
+			<li><a href="SocialWorker.html">Social&nbsp;Worker</a></li>
+			<li><a href="php-mysql-calendar/3a-calendar.php">Events</a></li>
+			<li><a href="MonthlyMeetings.html">Monthly&nbsp;Meetings</a></li>
+			<li><a href="School.html">School</a></li>
+		</ul></nav>
+		<table>
+			<tr><th>
+				<a href="UploadTest.html?option=upload">Upload image</a>
+				<a href="UploadTest.html?option=gallery">Image Gallery</a>
+				<?php
+					@$gall=$_GET('option');
+						switch($gall)
+						{
+							case 'upload':
+							include('php/upload.php');
+							break;
+							case 'gallery':
+							include('php/gallery.php');
+							break;
+						}
+					?>
+				</th></tr>
+				</table>
+			</th>
+		</tr>
+		
+		</table>
+
+	</body>
+</html>
