@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+  <title>Fairmont Community</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Fairmont Community Web Page" />
+  <script src="moment.js"></script>
+  <link rel="stylesheet" type="text/css" href="fairmont.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <script src="mailerlite.js"></script>
+</head>
+
+<body>
+  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+  <div class="wrapper">
+    <div class="contentContainerEvents">
+      <header>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="socialWorker.html">Social Work</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li class="active"><a href="events.html">Events</a></li>
+        </ul>
+      </header>
+
+      <main>
+        <img style="margin-bottom: 30px;" src="plan.jpg" alt="image">
+        <h1 style="color: #828f21; text-align: center;">Fairmont upcoming events</h1>
+        <div id="eventsContainer" class="eventsContainer"></div>
+
+        <script src="calendarModel.js"></script>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footerContainer">
+
+      <div class="column">
+        <iframe
+          src="https://www.meteoblue.com/en/weather/widget/daily/fairmont_united-states-of-america_4891555?geoloc=fixed&amp;days=4&amp;tempunit=FAHRENHEIT&amp;windunit=MILE_PER_HOUR&amp;precipunit=INCH&amp;coloured=monochrome&amp;pictoicon=0&amp;pictoicon=1&amp;maxtemperature=0&amp;maxtemperature=1&amp;mintemperature=0&amp;mintemperature=1&amp;windspeed=0&amp;windspeed=1&amp;windgust=0&amp;winddirection=0&amp;uv=0&amp;humidity=0&amp;precipitation=0&amp;precipitationprobability=0&amp;spot=0&amp;pressure=0&amp;layout=dark"
+          frameborder="0" scrolling="NO" allowtransparency="true"
+          sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+          aria-label="weather forecast" style="width: 216px;height: 244px"></iframe>
+
+      </div>
+
+      <div class="column">
+
+        <h1 style="font-weight: lighter; color: white;">Don't miss an update!</h1>
+        <button style="width: 220px;" onclick="ml_account('webforms', '3884167', 'l4a5h2', 'show')">
+          Subscribe
+        </button>
+
+      </div>
+
+      <div class="column">
+        <h1 style="font-weight: lighter; color: white;">Socials</h1>
+        <a href="https://www.facebook.com/fairmontcommunitypartnership/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+    <p>&#9400; 2021 for Fairmont.</p>
+  </footer>
+  </main>
+</body>
+
+</html>
